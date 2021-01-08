@@ -1,7 +1,10 @@
+#include <stdlib.h>
+
 typedef struct {
-    unsigned char magic[8];
-} mylib_config;
+    size_t size;
+    int discordia;
+} mylib_param;
 
-#define MYLIB_CONFIG_INIT { "versio1" };
+#define MYLIB_CONFIG_INIT { sizeof(mylib_param) };
 
-int mylib_answer(mylib_config *config);
+int mylib_answer(mylib_param *uparam);

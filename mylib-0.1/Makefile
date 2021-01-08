@@ -1,2 +1,2 @@
 mylib-0.1.so:
-	gcc -shared -o mylib-0.1.so -fPIC -I. src/mylib.c
+	gcc -fsanitize=address -fsanitize=undefined -Wall -shared -o mylib-0.1.so -fPIC -I. src/mylib.c

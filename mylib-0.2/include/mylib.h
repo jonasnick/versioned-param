@@ -1,8 +1,14 @@
+#include <stdlib.h>
+
 typedef struct {
-    unsigned char magic[8];
+    size_t size;
     int discordia;
-} mylib_config;
+    /* dummy is required to distinguish between this param and previous
+     * versions' param */
+    int dummy;
+    int illuminati;
+} mylib_param;
 
-#define MYLIB_CONFIG_INIT { "versio2", 0 };
+#define MYLIB_CONFIG_INIT { sizeof(mylib_param) };
 
-int mylib_answer(mylib_config *config);
+int mylib_answer(mylib_param *uparam);
