@@ -1,6 +1,7 @@
 #include <stdlib.h>
 
 typedef struct {
+    /* magic allows checking if the struct is initialized */
     unsigned char magic[4];
     size_t size;
     int discordia;
