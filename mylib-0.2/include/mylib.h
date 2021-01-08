@@ -11,7 +11,7 @@ typedef struct {
     int illuminati;
 } mylib_param;
 
-#define MYLIB_CONFIG_MAGIC "\x3F\x2F\x8B\x7C"
-#define MYLIB_CONFIG_INIT { MYLIB_CONFIG_MAGIC, sizeof(mylib_param) };
+#define MYLIB_PARAM_MAGIC "\x3F\x2F\x8B\x7C"
+#define MYLIB_PARAM_INIT { MYLIB_PARAM_MAGIC, sizeof(mylib_param) };
 
 int mylib_answer(mylib_param *uparam);

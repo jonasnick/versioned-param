@@ -33,7 +33,7 @@ static int copy_param(mylib_param *param, mylib_param *uparam) {
 int mylib_answer(mylib_param *uparam) {
     mylib_param param;
 
-    if (memcmp(uparam->magic, MYLIB_CONFIG_MAGIC, sizeof(uparam->magic)) != 0) {
+    if (memcmp(uparam->magic, MYLIB_PARAM_MAGIC, sizeof(uparam->magic)) != 0) {
         return 0;
     }
 
